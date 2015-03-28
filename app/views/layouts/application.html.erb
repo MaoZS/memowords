@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zsdou</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id ='top_tittle'><span>ZSdou.net</span><br />
+		<% if current_user %>
+		名前："<%= current_user.name %>”としてログイン中です　もし別人であればログアウトしてください。  <br />
+		<% end %>
+	</div>
+	
+	<div id ='user_nav'>
+
+		<% if current_user %> 
+			名前:"<%= current_user.name %>”<br />
+			<%= link_to "ログアウト", log_out_path %><br />
+			<%= link_to "ユーザー情報", user_show_path %>
+		<% else %>  
+    		<%= link_to "ユーザー登録", sign_up_path %><br /> 
+    		<%= link_to "ログイン", log_in_path %>  
+  		<% end %>
+  	</div> 
+  	<div style="clear: left"></div>
+  	<br />
+
+<%= render  'layouts/navi.html' %>
+
+<br />
+
+<%= notice %>
+  <% flash.each do |name, msg| %>  
+    <%= content_tag :div, msg, :id => "flash#{name}" %>  
+  <% end %> 
+
+  
+<%= yield %>
+
+</body>
+</html>

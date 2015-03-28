@@ -1,0 +1,15 @@
+
+
+<div id="book_info">
+	<h1><%= "Book" + @memoword.number.to_s %></h1>
+	<div>
+		<h2>タイトル：<%= @memoword.title %></h1>
+		<h2>分類：<%= @memoword.division %></h2>
+		<h3>説明：</h3>
+		<%= @memoword.comment %>
+	</div>
+	<%= link_to "編集", memowords_edit_path %>
+	<br />
+</div>
+<%= render 'cards/cardlist'%>
+	

@@ -1,0 +1,25 @@
+<div id="cardlist">
+<h1>カード一覧</h1>
+
+<table>
+  <tr>
+  	<th>㌻</th>
+  	<th>分類</th>
+    <th>質問</th>
+    <th>答え</th>
+
+  </tr>
+
+<% @memoword.cards.each_with_index do |card,i| %>
+  <tr>
+  	<td><%= (i/10+1) %></td>
+  	<td><%= card.division %></td>
+    <td><%= card.question %></td>
+    <td><%= card.answer %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+
+<%= link_to 'New Card', new_card_path %>

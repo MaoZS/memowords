@@ -1,0 +1,29 @@
+<h1>Listing cards</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Division</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<%= paginate @cards %>
+<% @cards.each do |card| %>
+  <tr>
+    <td><%= card.question %></td>
+    <td><%= card.answer %></td>
+    <td><%= card.division %></td>
+    <td><%= card.user_id %></td>
+    <td><%= link_to 'Show', card %></td>
+    <td><%= link_to 'Edit', edit_card_path(card) %></td>
+    <td><%= link_to 'Destroy', card, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= paginate @cards %><br />
+<%= link_to 'New Card', new_card_path %>

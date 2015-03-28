@@ -1,0 +1,44 @@
+<div id="new_card">
+
+	<%= form_for(@card) do |f| %>
+	  <% if @card.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+	
+	      <ul>
+	      <% @card.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <div class="field">
+	    <%= f.label :division,"分類" %><br />
+	    <%= f.text_field :division %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :question,"質問" %><br />
+	    <%= f.text_area :question,{:cols => 40 ,:rows => 5}%>
+	  </div>
+	  <div class="field">
+	    <%= f.label :answer,"答え" %><br />
+	    <%= f.text_area :answer,{:cols => 40 ,:rows => 5} %>
+	  </div>
+	
+	  <div class="actions">
+	    <%= f.submit '作成ボタン'%>
+	  </div>
+	<% end %>
+</div>
+<div class="comment">
+	<h1>使い方</h1>
+	<div>
+		<p><span>分類</span>：分類は空欄でも構いません。ですが何かしら入力していただければ今後より便利な機能が追加されたときに良いことがあるかもしれません。</p>
+		
+		<p><span>質問</span>：単語帳を開いたとき、左側に表示されている部分になります。</p>
+		
+		<p><span>答え</span>：単語帳を開いたときに、右側の隠された部分になります。</p>
+	</div>
+</div>
+	

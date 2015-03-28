@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @memoword.number %>
+</p>
+
+<p>
+  <b>Division:</b>
+  <%= @memoword.division %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @memoword.title %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @memoword.comment %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @memoword.user_id %>
+</p>
+
+<p>
+  <b>Cards ary:</b>
+  <%= @memoword.cards_ary %>
+</p>
+
+
+<%= link_to 'Edit', edit_memoword_path(@memoword) %> |
+<%= link_to 'Back', memowords_path %>

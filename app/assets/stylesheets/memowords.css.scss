@@ -1,0 +1,85 @@
+// Place all the styles related to the memowords controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.book_show{
+  table {
+    border: solid 10px #ffa500;
+    border-radius: 20px;
+    border-spacing: 5px;
+    padding: 5px;
+    background-color:#e6e6fa;
+    empty-cells:show;
+    
+    tr{
+      
+     th{
+       width:250px;
+       height:40px;
+       border: double 3px #ffd700;
+       border-radius:4px;
+       background-color:#ffd700;
+       padding:0.3em 1em;
+       text-align:center;
+       span{
+         font-size:x-large;
+         border: solid 5px #b0c4de;
+         border-radius: 10px;
+         background-color: #f0f8ff;
+         color:#6ba6e0;  
+       }
+     }
+      td{
+        width:250px;
+        border: solid 2px #ffd700;
+        border-radius: 20px;
+        background-color:#ffffe0;
+        padding:0.5em 1em;
+        text-align:center;
+        font-size:large;
+        line-height:120%;
+      }
+    }
+  }
+  .jumpbox{
+    width:600px;
+    text-align:center;
+    font-size:x-large;
+    font-weight:600;
+    line-height:60px;
+    span{
+      border: solid 5px #b0c4de;
+      border-radius: 10px;
+      background-color: #f0f8ff;
+      width:60px;
+      height:60px;
+      color:#6ba6e0;
+    }
+  .current{
+    font-size:50px;
+  }
+  }
+}
+#book_info{
+  width:600px;
+  background-color:#ffa500;
+  border:solid 3px #ffa500;
+  border-radius:7px;
+  
+  h1{
+    width:550px;
+    padding:0 10px 0 10px;
+  }
+  div{
+    background-color:#ffffe0;
+    padding:0px 10px 5px 10px;
+  }
+  a{
+    font-size:large;
+    margin-left:270px;
+    font-weight:600;
+    line-height:120%;
+  }
+}
+
+

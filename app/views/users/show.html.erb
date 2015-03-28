@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div id="user_show">
+	<h1>ユーザー情報</h1><span><%= link_to 'パスワードを変更する', change_pass_path %> </span>
+	<p>Nameは掲示板等に書き込んだときに表示される名前です。</p>
+	<div>
+		<p>
+		  <b>Name:</b>
+		  <%= @user.name %>
+		</p>
+	</div>
+	<p>Log_in_IDはログインするときに使用します。</p>
+	<div>
+		<p>
+ 		 <b>Log in ID:</b>
+ 		 <%= @user.log_in_name %>
+		</p>
+	</div>
+	<p>Emailは今のところ用途はありませんが、そのうち当サイトからのお知らせを送ることがあるかもしれません。</p>
+	<div>
+		<p>
+ 		 <b>Email:</b>
+		 <%= @user.email %>
+		</p>
+	</div>
+</div>
+<%= session[:user_id] %>

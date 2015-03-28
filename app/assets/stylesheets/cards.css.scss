@@ -1,0 +1,44 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div#cardlist{
+  margin-top:10px;
+  width:600px;
+  background-color:#ffa500;
+  border:solid 1px #ffa500;
+  border-radius:7px;
+  h1{
+    padding:0 0 0 10px;
+    font-size:large;
+    line-height:10%;
+    color:white;
+  }
+  table{
+    width:600px;
+    border:solid 1px #ffa500;
+    border-radius:7px;
+    border-collapse:separate;
+    th{
+      background-color:#ffffe0;
+    }
+    tr:nth-of-type(odd){background-color:#ffffe0;}
+    tr:nth-of-type(even){background-color:#fffafa;}
+    tr{
+      td{
+        padding:0 10px 0 10px;
+        font-size:large;
+        line-height:180%
+      }
+    }
+  }
+}
+div#new_card{
+  width:600px;
+  padding:10px;
+  border-radius:20px;
+  background-color:lavender;
+  label{
+    font-size:large;
+    font-weight:600;
+  }
+}

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Memoword:</b>
+  <%= @listing_card.memoword_id %>
+</p>
+
+<p>
+  <b>Card:</b>
+  <%= @listing_card.card_id %>
+</p>
+
+<p>
+  <b>Memorized:</b>
+  <%= @listing_card.memorized %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_card_path(@listing_card) %> |
+<%= link_to 'Back', listing_cards_path %>

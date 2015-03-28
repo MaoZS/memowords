@@ -1,0 +1,50 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div#user_show{
+  width:600px;
+  padding:10px;
+  margin:10px;
+  border:solid 2px black;
+  div{
+    width:500px;
+    border: solid 2px black;
+    background-color: lavender;
+    margin: 10px;
+    padding:0 10px 0 10px;
+  }
+}
+div#user_new{
+  width:600px;
+  padding:10px;
+  border-radius:20px;
+  background-color:lavender;
+  span{
+    color:red;
+  }
+  fieldset{
+    background-color:aliceblue;
+    margin-top:20px;
+    legend{
+      font-size:large;
+      font-weight:600;
+    }
+  }
+  div.actions{
+    font-size:large;
+    line-height:200%
+  }
+}
+div#change_pass{
+  width:600px;
+  background-color:lavender;
+  padding:10px;
+  h1{
+    margin:10px;
+  }
+  .field{
+    padding:10px;
+    border-radius:20px;
+    background-color:aliceblue;
+  }
+}

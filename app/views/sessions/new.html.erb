@@ -1,0 +1,19 @@
+<div id="log_in">
+<h1>ログイン</h1>
+ログインIDとパスワードを入力して"ログイン"をクリックしてくださいtest
+<div>
+<%= form_tag sessions_path do %>
+	<p>
+		<%= label :log_in_name,"ログインID" %><br />
+		<%= text_field_tag :log_in_name %>
+	</p>
+	
+	<p>
+		<%= label :password,"パスワード" %><br />
+		<%= password_field_tag :password %>
+	</p>
+	
+	<p class="button"><%= submit_tag 'ログイン' %>（←これをクリック） </p>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<div id="change_pass">
+<h1>パスワード変更</h1>
+<%= form_tag(pass_update_path ,{:method => 'put'}) do %>
+	<p>確認のため今のパスワードを入力してください</p>
+	<div class="field">
+		<%= label :pass,:oldpassword ,"現在のパスワード"%> <br />
+		<%= password_field :pass,:oldpassword ,{:size => 40 } %>
+	</div>
+	<p>新しいパスワードを入力して”パスワード変更”をクリックしてください</p>
+	<div class="field">
+		<%= label :pass,:newpassword,"新しいパスワード" %> <br />
+		<%= password_field  :pass,:newpassword ,{:size => 40 } %><br /><br />
+		
+		<%= label :pass,:confirmation　,"もう一度入力してください" %> <br />
+		<%= password_field :pass,:confirmation ,{:size => 40 } %>
+	</div>
+	
+	<%= submit_tag 'パスワード変更'%>
+
+<% end %>
+

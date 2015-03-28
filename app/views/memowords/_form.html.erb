@@ -1,0 +1,32 @@
+<div class="form">
+	<%= form_for(@memoword) do |f| %>
+	  <% if @memoword.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@memoword.errors.count, "error") %> prohibited this memoword from being saved:</h2>
+	
+	      <ul>
+	      <% @memoword.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	
+	  <div class="field">
+	    <%= f.label :division,"分類" %><br />
+	    <%= f.text_field :division %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :title,"タイトル" %><br />
+	    <%= f.text_field :title %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :comment,"コメント" %><br />
+	    <%= f.text_area :comment ,{:rows => 5}%>
+	  </div>
+	  
+	  <div class="actions">
+	    <%= f.submit '更新ボタン'%>
+	  </div>
+	<% end %>
+</div>

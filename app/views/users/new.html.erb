@@ -1,0 +1,57 @@
+<h1>ユーザー登録</h1>
+<div id="user_new">
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <span>注意：登録した情報は必ずメモを取ってください。<br />
+  	ログインIDやパスワードを忘れてしまった場合、管理者でもわからないのでログインできなくなります。
+  </span>
+  <fieldset>
+	  <legend>名前とメールアドレス</legend>
+	  <p><strong>名前</strong>は掲示板やチャットルームで表示される名前です。</p>
+
+	  <div class="field">
+	    <%= f.label :name,"名前" %><br />
+	    <%= f.text_field :name %>
+	  </div>
+	  <p><strong>メールアドレス</strong>は必ず連絡の付くアドレスを登録してください。<br />
+	  	Zsdouからお知らせがある場合に利用します。
+	  </p>
+	  <div class="field">
+	    <%= f.label :email,"メールアドレス" %><br />
+	    <%= f.text_field :email %>
+	  </div>
+  </fieldset>
+  <fieldset>
+  	  <legend>ログインIDとパスワード</legend>
+  	  <p><strong>ログインID</strong>はセキュリティ上の観点から上で登録した名前とは違うものを設定してください。</p>
+	  <div class="field">
+	    <%= f.label :log_in_name,"ログインID" %><br />
+	    <%= f.text_field :log_in_name %>
+	  </div>
+	  <p><strong>パスワード</strong>は半角英数で８桁以上を設定してください。</p>
+	  <div class="field">
+	    <%= f.label :password,"パスワード" %><br />
+	    <%= f.password_field :password %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :password_confirmation,"確認のためもう一度パスワードを入力してください" %><br />
+	    <%= f.password_field :password_confirmation %>
+	  </div>
+  </fieldset>
+  <div class="actions">
+    <%= f.submit "ユーザー登録"%>
+  </div>
+<% end %>
+
+</div>
+

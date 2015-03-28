@@ -1,0 +1,33 @@
+<h1>Listing memowords</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Division</th>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>User</th>
+    <th>Cards ary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @memowords.each do |memoword| %>
+  <tr>
+    <td><%= memoword.number %></td>
+    <td><%= memoword.division %></td>
+    <td><%= memoword.title %></td>
+    <td><%= memoword.comment %></td>
+    <td><%= memoword.user_id %></td>
+    <td><%= memoword.cards_ary %></td>
+    <td><%= link_to 'Show', memoword %></td>
+    <td><%= link_to 'Edit', edit_memoword_path(memoword) %></td>
+    <td><%= link_to 'Destroy', memoword, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Memoword', new_memoword_path %>

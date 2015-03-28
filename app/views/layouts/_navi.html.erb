@@ -1,0 +1,16 @@
+<div id="navi">
+	<h1>Memoword</h1>
+	<table>
+		<tr>
+			<td><%= link_to "Book1", book1_path %></td>
+			<td><%= link_to "Book2", book2_path %></td>
+			<td><%= link_to "Book3", book3_path %></td>
+		</tr>
+		<tr>
+			<td><%= link_to "単語帳１",:controller => "memowords",:action => "book_show",:num => '1'%></td>
+			<td><%= link_to "単語帳2",:controller => "memowords",:action => "book_show",:num => '2'%></td>
+			<td><%= link_to "単語帳3",:controller => "memowords",:action => "book_show",:num => '3'%></td>
+		</tr>
+	</table>
+
+</div>

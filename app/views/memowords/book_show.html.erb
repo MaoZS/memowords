@@ -1,0 +1,32 @@
+<div class="book_show" >
+	
+<h1>Listing cards</h1>
+
+<div class="jumpbox">
+	<%= paginate @cards,:window => 0 %>
+</div>
+
+<table>
+  <tr>
+    <th>質問</th>
+    <th id = 'answers'>答え&nbsp<span id= 'open'>全開</span>&nbsp&nbsp&nbsp<span id ='close'>全閉</span></th>
+  </tr>
+
+<% @cards.each_with_index do |card,i| %>
+  <tr class = 'card' id = '<%= i %>' data-answer=<%= card.answer %> >
+    <td><%= card.question %></td>
+    <td>Clickすると答えが開きます</td>
+
+  </tr>
+<% end %>
+</table>
+<br />
+<div class="jumpbox">
+	<%= paginate @cards,:window => 0 %>
+</div>
+
+<br />
+
+<%= link_to 'New Card', new_card_path %>
+
+</div>
